@@ -1,22 +1,17 @@
-import java.util.Scanner;
+import java.util.Date;
 
 public class App {
 
-    // O método main é o ponto de partida de execução do código.
     public static void main(String[] args) {
 
-        Pessoa objetoPessoa = new Pessoa();
+        Vendedor v = new Vendedor();
+        v.setNome("Marcio");
+        v.setCpf("34055066990");
+        v.setSalario(1000.0f);
+        v.setDataNascimento(new Date());
+        v.setTotalComissao(812.21f);
 
-        Scanner leitor = new Scanner(System.in);
-
-        System.out.print("Digite seu peso: ");
-        objetoPessoa.peso = leitor.nextFloat();
-
-        System.out.print("Digite sua altura: ");
-        objetoPessoa.altura = leitor.nextFloat();
-
-        System.out.println("IMC = " + objetoPessoa.calcularIMC());
-        
+        System.out.println("Salário do vendedor: R$" + v.calcularSalario());
     }
 
 }
